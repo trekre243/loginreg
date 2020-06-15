@@ -1,0 +1,47 @@
+@model User
+<form asp-action="Create" asp-controller="User" method="post">
+    <div class="row">
+        <div class="col s9">
+            <h3>Register to this Cool Site!</h3>
+        </div>
+        <div class="col s3 right-align">
+            <a href="/login">Login</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s6">
+            <div class="input-field col s12">
+                <input asp-for="FirstName" type="text">
+                <label asp-for="FirstName"></label>
+                <span asp-validation-for="FirstName"></span>
+            </div>
+            <div class="input-field col s12">
+                <input asp-for="LastName" type="text">
+                <label asp-for="LastName"></label>
+                <span asp-validation-for="LastName"></span>
+            </div>
+            <div class="input-field col s12">
+                <input asp-for="Email" type="text">
+                <label asp-for="Email"></label>
+                <span asp-validation-for="Email"></span>
+            </div>
+        </div>
+        <div class="col s6">
+            <div class="input-field col s12">
+                <input asp-for="Password" type="Password">
+                <label asp-for="Password"></label>
+                <span asp-validation-for="Password"></span>
+            </div>
+            <div class="input-field col s12">
+                <input asp-for="ConfirmPassword" type="Password">
+                <label asp-for="ConfirmPassword"></label>
+                <span asp-validation-for="ConfirmPassword"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <button type="submit" class="waves-effect waves-light btn">Sign Up Now</button>
+        </div>
+    </div>
+</form>

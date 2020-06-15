@@ -1,0 +1,26 @@
+@model LoginUser
+<form asp-action="Login" asp-controller="User" method="post">
+    <div class="row">
+        <div class="col s9">
+            <h3>Login to this Cool Site!</h3>
+        </div>
+        <div class="col s3 right-align">
+            <a href="/">Register</a>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input asp-for="Email" type="text">
+                <label asp-for="Email"></label>
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div class="input-field col s12">
+                <input asp-for="Password" type="password">
+                <label asp-for="Password"></label>
+                <span asp-validation-for="Password"></span>
+            </div>
+            <div class="col s12">
+                <button type="submit" class="waves-effect waves-light btn">Sign up Now</button>
+            </div>
+        </div>
+    </div>
+</form>
